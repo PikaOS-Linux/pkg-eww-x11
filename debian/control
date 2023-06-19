@@ -1,4 +1,4 @@
-Source: eww-wayland
+Source: eww-x11
 Section: main
 Priority: optional
 Maintainer: ferreo <harderthanfire@gmail.com>
@@ -19,9 +19,9 @@ Build-Depends: debhelper-compat (= 13),
                libpulse-dev,
 Rules-Requires-Root: no
 
-Package: eww-wayland
+Package: eww-x11
 Architecture: linux-any
 Depends: ${misc:Depends}
-Conflicts: eww-x11
+Conflicts: eww-wayland
 Provides: eww
-Description: eww widget system for wayland
+Description: eww widget system for x11
