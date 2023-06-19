@@ -6,6 +6,8 @@ Standards-Version: 4.6.1
 Build-Depends: debhelper-compat (= 13),
                libssl-dev,
                curl,
+               cmake,
+               cmake-extras,
                build-essential,
                libgdk-pixbuf-2.0-dev,
                libglib2.0-dev,
