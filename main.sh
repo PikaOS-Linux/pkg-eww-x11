@@ -3,9 +3,10 @@
 DEBIAN_FRONTEND=noninteractive
 
 # Clone Upstream
-mkdir -p ./src-pkg-name
-cp -rvf ./debian ./src-pkg-name/
-cd ./src-pkg-name/
+git clone --recurse-submodules https://github.com/elkowar/eww
+cd eww
+cp -rvf ../debian ./
+cp -vf ../Makefile ./Makefile
 
 # Get build deps
 apt-get build-dep ./ -y
