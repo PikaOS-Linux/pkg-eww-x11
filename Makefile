@@ -3,8 +3,7 @@ all:
 
 install:
 	mkdir -p $(DESTDIR)/usr/bin/
-	rustup install nightly
-	rustup default nightly
+	curl https://sh.rustup.rs -sSf | sh -s -- --profile minimal --default-toolchain nightly
 	cargo build --release --no-default-features --features=wayland
 	install target/release/eww $(DESTDIR)/usr/bin/eww
 	chmod +x $(DESTDIR)/usr/bin/eww
