@@ -3,7 +3,7 @@ all:
 
 install:
 	mkdir -p $(DESTDIR)/usr/bin/
-	CARGO_HOME=/root/.cargo RUSTUP_HOME=/root/.rustup curl https://sh.rustup.rs -sSf | sh -s -- --profile minimal -y --default-toolchain nightly
+	curl https://sh.rustup.rs -sSf | CARGO_HOME=/root/.cargo HOME=/root RUSTUP_HOME=/root/.rustup sh -s -- --profile minimal -y --default-toolchain nightly
 	. /root/.cargo/env
 	cargo build --release --no-default-features --features=wayland
 	install target/release/eww $(DESTDIR)/usr/bin/eww
