@@ -4,7 +4,7 @@ all:
 install:
 	mkdir -p $(DESTDIR)/usr/bin/
 	curl https://sh.rustup.rs -sSf | sh -s -- --profile minimal -y --default-toolchain nightly
-	. ~/.cargo/env
+	. $HOME/.cargo/env
 	cargo build --release --no-default-features --features=wayland
 	install target/release/eww $(DESTDIR)/usr/bin/eww
 	chmod +x $(DESTDIR)/usr/bin/eww
