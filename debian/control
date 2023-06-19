@@ -5,6 +5,7 @@ Maintainer: ferreo <harderthanfire@gmail.com>
 Standards-Version: 4.6.1
 Build-Depends: debhelper-compat (= 13),
                libssl-dev,
+               curl,
                cargo,
                build-essential,
                libgdk-pixbuf-2.0-dev,
