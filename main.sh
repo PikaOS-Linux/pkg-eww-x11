@@ -3,7 +3,7 @@
 DEBIAN_FRONTEND=noninteractive
 
 # Clone Upstream
-git clone --recurse-submodules https://github.com/elkowar/eww
+git clone --recurse-submodules https://github.com/elkowar/eww 
 cd eww
 cp -rvf ../debian ./
 cp -vf ../Makefile ./Makefile
